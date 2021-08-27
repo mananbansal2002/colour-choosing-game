@@ -58,8 +58,13 @@ for(let i=0;i<options.length;i++)
             document.getElementById('round').textContent = round;
     document.getElementById('score').textContent = score;
 
-    if (document.getElementById('round').textContent == '20') 
-      clearInterval(game);
+     if(round==21)
+    {   
+        round=0;
+        document.getElementById('score').textContent=0;
+                document.getElementById('round').textContent=0;
+               alert("Time's Up");
+    }
     
          
         });
